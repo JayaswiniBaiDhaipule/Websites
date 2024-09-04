@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-bar">
+            <img src="Images/logo.png" class="logo">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SPECIFICATION</a></li>
+                <li><a href="#">PRODUCTS</a></li>
+                <li><a href="#">CONNECT</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="left-col">THE <br>REAL <br>SOUND</div>
+            <div class="right-col">
+                <p>Click Here to Listen</p>
+                <img src="Images/play.png" class="play-icon">
+            </div>
+        </div>
+    </div>
+
+    <audio id="mysong">
+        <source src="Images/song2.mp3"  type="audio/mp3">
+    </audio>
+
+    <script>
+        var mySong = document.getElementById("mysong");
+        var icon = document.getElementsByClassName("play-icon")[0];
+
+        icon.onclick = function() {
+            if(mySong.paused){
+                mySong.play();
+                icon.src = "Images/pause.png";
+                }else{
+                    mySong.pause();
+                    icon.src="Images/play.png";
+                }
+            }
+    </script>
+
+    
+</body>
+</html>
